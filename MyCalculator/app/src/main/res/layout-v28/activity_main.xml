@@ -8,7 +8,8 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="8dp"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:background="@color/black">
 
     <TextView
         android:id="@+id/textView1"
@@ -16,6 +17,7 @@
         android:layout_height="42dp"
         android:layout_marginTop="60dp"
         android:text="@string/last"
+        android:textColor="@color/white"
         android:textSize="18sp" />
 
     <TextView
@@ -25,6 +27,7 @@
         android:layout_marginTop="15dp"
         android:layout_marginBottom="60dp"
         android:text="@string/now"
+        android:textColor="@color/white"
         android:textSize="18sp" />
 
     <GridLayout
@@ -32,8 +35,7 @@
         android:layout_height="0dp"
         android:layout_weight="1"
         android:columnCount="4"
-        android:rowCount="5"
-        android:outlineAmbientShadowColor="@color/gray">
+        android:rowCount="5">
 
         <Button
             android:id="@+id/buttonAD"
@@ -42,6 +44,7 @@
             android:layout_columnWeight="1"
             android:layout_rowWeight="1"
             android:textSize="24sp"
+            android:backgroundTint="@color/gray2"
             android:text="@string/ad" />
 
         <Button
@@ -51,6 +54,7 @@
             android:layout_columnWeight="1"
             android:layout_rowWeight="1"
             android:textSize="24sp"
+            android:backgroundTint="@color/gray2"
             android:text="@string/c" />
 
         <Button
@@ -60,6 +64,7 @@
             android:layout_columnWeight="1"
             android:layout_rowWeight="1"
             android:textSize="16sp"
+            android:backgroundTint="@color/gray2"
             android:text="@string/del" />
 
         <Button
@@ -69,6 +74,7 @@
             android:layout_columnWeight="1"
             android:layout_rowWeight="1"
             android:textSize="24sp"
+            android:backgroundTint="@color/orange"
             android:text="@string/Divide" />
 
         <Button
@@ -78,6 +84,7 @@
             android:layout_columnWeight="1"
             android:layout_rowWeight="1"
             android:textSize="24sp"
+            android:backgroundTint="@color/gray"
             android:text="@string/_1" />
 
         <Button
@@ -87,6 +94,7 @@
             android:layout_columnWeight="1"
             android:layout_rowWeight="1"
             android:textSize="24sp"
+            android:backgroundTint="@color/gray"
             android:text="@string/_2" />
 
         <Button
@@ -96,6 +104,7 @@
             android:layout_columnWeight="1"
             android:layout_rowWeight="1"
             android:textSize="24sp"
+            android:backgroundTint="@color/gray"
             android:text="@string/_3" />
 
         <Button
@@ -104,6 +113,7 @@
             android:layout_height="0dp"
             android:layout_columnWeight="1"
             android:layout_rowWeight="1"
+            android:backgroundTint="@color/orange"
             android:textSize="24sp"
             android:text="@string/Multiply" />
 
@@ -114,6 +124,7 @@
             android:layout_columnWeight="1"
             android:layout_rowWeight="1"
             android:textSize="24sp"
+            android:backgroundTint="@color/gray"
             android:text="@string/_4" />
 
         <Button
@@ -123,6 +134,7 @@
             android:layout_columnWeight="1"
             android:layout_rowWeight="1"
             android:textSize="24sp"
+            android:backgroundTint="@color/gray"
             android:text="@string/_5" />
 
         <Button
@@ -132,6 +144,7 @@
             android:layout_columnWeight="1"
             android:layout_rowWeight="1"
             android:textSize="24sp"
+            android:backgroundTint="@color/gray"
             android:text="@string/_6" />
 
         <Button
@@ -141,6 +154,7 @@
             android:layout_columnWeight="1"
             android:layout_rowWeight="1"
             android:textSize="24sp"
+            android:backgroundTint="@color/orange"
             android:text="@string/Reduce" />
 
         <Button
@@ -150,6 +164,7 @@
             android:layout_columnWeight="1"
             android:layout_rowWeight="1"
             android:textSize="24sp"
+            android:backgroundTint="@color/gray"
             android:text="@string/_7" />
 
         <Button
@@ -159,6 +174,7 @@
             android:layout_columnWeight="1"
             android:layout_rowWeight="1"
             android:textSize="24sp"
+            android:backgroundTint="@color/gray"
             android:text="@string/_8" />
 
         <Button
@@ -168,6 +184,7 @@
             android:layout_columnWeight="1"
             android:layout_rowWeight="1"
             android:textSize="24sp"
+            android:backgroundTint="@color/gray"
             android:text="@string/_9" />
 
         <Button
@@ -177,6 +194,7 @@
             android:layout_columnWeight="1"
             android:layout_rowWeight="1"
             android:textSize="24sp"
+            android:backgroundTint="@color/orange"
             android:text="@string/Add" />
 
         <Button
@@ -186,6 +204,7 @@
             android:layout_columnWeight="1"
             android:layout_rowWeight="1"
             android:textSize="24sp"
+            android:backgroundTint="@color/gray"
             android:text="@string/point" />
 
         <Button
@@ -195,6 +214,7 @@
             android:layout_columnWeight="1"
             android:layout_rowWeight="1"
             android:textSize="24sp"
+            android:backgroundTint="@color/gray"
             android:text="@string/_0" />
 
         <Button
@@ -205,6 +225,7 @@
             android:layout_columnWeight="2"
             android:layout_rowWeight="1"
             android:textSize="24sp"
+            android:backgroundTint="@color/orange"
             android:text="@string/Answer" />
 
     </GridLayout>
