@@ -68,7 +68,7 @@
             app:icon="@drawable/backspace"
             app:iconGravity="textStart"
             app:iconPadding="0dp"
-            app:iconSize="32dp"
+            app:iconSize="24sp"
             app:iconTint="@null" />
 
         <Button
