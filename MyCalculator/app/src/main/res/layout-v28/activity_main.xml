@@ -29,7 +29,7 @@
         android:layout_marginBottom="60dp"
         android:text="@string/now"
         android:textColor="@color/white"
-        android:textSize="18sp" />
+        android:textSize="36sp" />
 
     <GridLayout
         android:layout_width="match_parent"
