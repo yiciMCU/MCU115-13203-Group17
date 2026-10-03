@@ -16,6 +16,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        textView1 = findViewById(R.id.textView1);
         textView2 = findViewById(R.id.textView2);
 
         Button button0 = findViewById(R.id.button0);
@@ -54,7 +55,7 @@ public class MainActivity extends AppCompatActivity {
             textView1.setText("");
             textView2.setText("");
         });
-        buttonAD.setOnClickListener(v -> {
+        buttonC.setOnClickListener(v -> {
             textView2.setText("");
         });
         buttonDelete.setOnClickListener(v -> {
@@ -71,7 +72,7 @@ public class MainActivity extends AppCompatActivity {
         buttonPlus.setOnClickListener(v -> textView2.append("+"));
         buttonEqual.setOnClickListener(v -> {
             textView1.setText(textView2.getText().toString());
-            textView2.setText("");
+            textView2.setText("0");
         });
         buttonDot.setOnClickListener(v -> textView2.append("."));
     }
