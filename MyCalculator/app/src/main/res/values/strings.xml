@@ -19,6 +19,6 @@
     <string name="Multiply">×</string>
     <string name="Divide">÷</string>
     <string name="del">Delete</string>
-    <string name="now"> </string>
+    <string name="now">0</string>
     <string name="last"> </string>
 </resources>

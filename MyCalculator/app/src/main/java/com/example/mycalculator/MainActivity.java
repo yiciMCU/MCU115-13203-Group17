@@ -40,30 +40,34 @@ public class MainActivity extends AppCompatActivity {
         Button buttonEqual = findViewById(R.id.buttonEqual);
         Button buttonDot = findViewById(R.id.buttonDot);
 
-        button0.setOnClickListener(v -> textView2.append("0"));
-        button1.setOnClickListener(v -> textView2.append("1"));
-        button2.setOnClickListener(v -> textView2.append("2"));
-        button3.setOnClickListener(v -> textView2.append("3"));
-        button4.setOnClickListener(v -> textView2.append("4"));
-        button5.setOnClickListener(v -> textView2.append("5"));
-        button6.setOnClickListener(v -> textView2.append("6"));
-        button7.setOnClickListener(v -> textView2.append("7"));
-        button8.setOnClickListener(v -> textView2.append("8"));
-        button9.setOnClickListener(v -> textView2.append("9"));
+        button0.setOnClickListener(v -> {
+            String current = textView2.getText().toString();
+            if (!current.equals("0")) {
+                textView2.append("0");
+            }
+        });
+        button1.setOnClickListener(v -> appendDigit("1"));
+        button2.setOnClickListener(v -> appendDigit("2"));
+        button3.setOnClickListener(v -> appendDigit("3"));
+        button4.setOnClickListener(v -> appendDigit("4"));
+        button5.setOnClickListener(v -> appendDigit("5"));
+        button6.setOnClickListener(v -> appendDigit("6"));
+        button7.setOnClickListener(v -> appendDigit("7"));
+        button8.setOnClickListener(v -> appendDigit("8"));
+        button9.setOnClickListener(v -> appendDigit("9"));
 
         buttonAD.setOnClickListener(v -> {
             textView1.setText("");
-            textView2.setText("");
+            textView2.setText("0");
         });
-        buttonC.setOnClickListener(v -> {
-            textView2.setText("");
-        });
+        buttonC.setOnClickListener(v -> textView2.setText("0"));
         buttonDelete.setOnClickListener(v -> {
             String current = textView2.getText().toString();
-
-            if (current.length() > 0) {
+            if (current.length() > 1) {
                 current = current.substring(0, current.length() - 1);
                 textView2.setText(current);
+            } else {
+                textView2.setText("0");
             }
         });
         buttonDivide.setOnClickListener(v -> textView2.append("÷"));
@@ -75,5 +79,14 @@ public class MainActivity extends AppCompatActivity {
             textView2.setText("0");
         });
         buttonDot.setOnClickListener(v -> textView2.append("."));
+    }
+
+    private void appendDigit(String digit) {
+        String current = textView2.getText().toString();
+        if (current.equals("0")) {
+            textView2.setText(digit);
+        } else {
+            textView2.append(digit);
+        }
     }
 }
