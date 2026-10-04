@@ -75,8 +75,22 @@ public class MainActivity extends AppCompatActivity {
         buttonMinus.setOnClickListener(v -> textView2.append("-"));
         buttonPlus.setOnClickListener(v -> textView2.append("+"));
         buttonEqual.setOnClickListener(v -> {
-            textView1.setText(textView2.getText().toString());
-            textView2.setText("0");
+
+            String expression = textView2.getText().toString();
+
+            if (expression.isEmpty()) {
+                return;
+            }
+
+            try {
+                double result = calculate(expression);
+
+                textView1.setText(expression);
+                textView2.setText(String.valueOf(result));
+
+            } catch (Exception e) {
+                textView2.setText("Error");
+            }
         });
         buttonDot.setOnClickListener(v -> textView2.append("."));
     }
@@ -88,5 +102,68 @@ public class MainActivity extends AppCompatActivity {
         } else {
             textView2.append(digit);
         }
+    }
+    private double calculate(String expression) {
+
+        expression = expression.replace("×", "*");
+        expression = expression.replace("÷", "/");
+
+        java.util.ArrayList<Double> numbers = new java.util.ArrayList<>();
+        java.util.ArrayList<Character> operators = new java.util.ArrayList<>();
+
+        String number = "";
+
+        for (int i = 0; i < expression.length(); i++) {
+            char c = expression.charAt(i);
+
+            if ((c >= '0' && c <= '9') || c == '.') {
+                number += c;
+            } else if (c == '+' || c == '-' || c == '*' || c == '/') {
+                numbers.add(Double.parseDouble(number));
+                number = "";
+                operators.add(c);
+            }
+        }
+
+        if (!number.isEmpty()) {
+            numbers.add(Double.parseDouble(number));
+        }
+
+        // 先算乘除
+        for (int i = 0; i < operators.size(); i++) {
+
+            if (operators.get(i) == '*' || operators.get(i) == '/') {
+
+                double a = numbers.get(i);
+                double b = numbers.get(i + 1);
+                double result;
+
+                if (operators.get(i) == '*') {
+                    result = a * b;
+                } else {
+                    result = a / b;
+                }
+
+                numbers.set(i, result);
+                numbers.remove(i + 1);
+                operators.remove(i);
+
+                i--;
+            }
+        }
+
+        // 再算加減
+        double result = numbers.get(0);
+
+        for (int i = 0; i < operators.size(); i++) {
+
+            if (operators.get(i) == '+') {
+                result += numbers.get(i + 1);
+            } else if (operators.get(i) == '-') {
+                result -= numbers.get(i + 1);
+            }
+        }
+
+        return result;
     }
 }
