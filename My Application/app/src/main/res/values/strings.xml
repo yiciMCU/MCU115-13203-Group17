@@ -18,4 +18,10 @@
     <string name="cola">Cola</string>
     <string name="iced_tea">Iced Tea</string>
     <string name="water">Water</string>
+    <string name="your_order_summary_will_appear_here">Your order summary will appear here.</string>
+    <string name="confirm">Confirm</string>
+    <string name="select_side_dishes_choose_at_least_one">Select Side Dishes (choose at least one)</string>
+    <string name="fries">Fries</string>
+    <string name="salad">Salad</string>
+    <string name="corn_cup">Corn Cup</string>
 </resources>
