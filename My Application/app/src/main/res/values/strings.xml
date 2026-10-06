@@ -9,4 +9,13 @@
     <string name="sides">Sides:</string>
     <string name="drink">Drink:</string>
     <string name="order">Order</string>
+    <string name="select_main_meal">Select Main Meal</string>
+    <string name="burger">Burger</string>
+    <string name="friedchicken">FriedChicken</string>
+    <string name="chickennuggets">ChickenNuggets</string>
+    <string name="done">Done</string>
+    <string name="select_drink">Select Drink</string>
+    <string name="cola">Cola</string>
+    <string name="iced_tea">Iced Tea</string>
+    <string name="water">Water</string>
 </resources>

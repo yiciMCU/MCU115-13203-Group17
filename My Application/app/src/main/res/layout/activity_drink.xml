@@ -1,10 +1,51 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".DrinkActivity">
+    android:orientation="vertical"
+    android:padding="20dp"
+    tools:context=".MainActivity">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/select_drink"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="16dp" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <RadioButton
+            android:id="@+id/Burger"
+            android:text="@string/cola"
+            android:layout_height="32dp"
+            android:layout_width="match_parent"/>
+
+        <RadioButton
+            android:id="@+id/FriedChicken"
+            android:text="@string/iced_tea"
+            android:layout_height="32dp"
+            android:layout_width="match_parent"/>
+
+        <RadioButton
+            android:id="@+id/ChickenNuggets"
+            android:text="@string/water"
+            android:layout_height="32dp"
+            android:layout_width="match_parent"/>
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/done" />
+
+</LinearLayout>
