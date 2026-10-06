@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="20dp"
-    tools:context=".MainActivity">
+    tools:context=".SideDishesActivity">
 
     <TextView
         android:layout_width="wrap_content"
@@ -16,27 +16,29 @@
         android:textStyle="bold"
         android:layout_marginBottom="16dp" />
 
-        <CheckBox
-            android:id="@+id/Burger"
-            android:text="@string/fries"
-            android:layout_height="32dp"
-            android:layout_width="match_parent"/>
+    <CheckBox
+        android:id="@+id/cbFries"
+        android:text="@string/fries"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:paddingBottom="8dp"/>
 
-        <CheckBox
-            android:id="@+id/FriedChicken"
-            android:text="@string/salad"
-            android:layout_height="32dp"
-            android:layout_width="match_parent"/>
+    <CheckBox
+        android:id="@+id/cbSalad"
+        android:text="@string/salad"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:paddingBottom="8dp"/>
 
-        <CheckBox
-            android:id="@+id/ChickenNuggets"
-            android:text="@string/corn_cup"
-            android:layout_height="32dp"
-            android:layout_width="match_parent"/>
-
+    <CheckBox
+        android:id="@+id/cbCornCup"
+        android:text="@string/corn_cup"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:paddingBottom="8dp"/>
 
     <Button
-        android:id="@+id/button4"
+        android:id="@+id/buttonDone"
         android:layout_width="match_parent"
         android:layout_height="45dp"
         android:layout_marginTop="16dp"

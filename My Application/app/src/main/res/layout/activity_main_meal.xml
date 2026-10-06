@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="20dp"
-    tools:context=".MainActivity">
+    tools:context=".MainMealActivity">
 
     <TextView
         android:layout_width="wrap_content"
@@ -18,31 +18,34 @@
 
     <RadioGroup
         android:id="@+id/radioGroup"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
         <RadioButton
-            android:id="@+id/Burger"
+            android:id="@+id/rbBurger"
             android:text="@string/burger"
-            android:layout_height="32dp"
-            android:layout_width="match_parent"/>
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:paddingBottom="8dp"/>
 
         <RadioButton
-            android:id="@+id/FriedChicken"
+            android:id="@+id/rbFriedChicken"
             android:text="@string/friedchicken"
-            android:layout_height="32dp"
-            android:layout_width="match_parent"/>
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:paddingBottom="8dp"/>
 
         <RadioButton
-            android:id="@+id/ChickenNuggets"
+            android:id="@+id/rbChickenNuggets"
             android:text="@string/chickennuggets"
-            android:layout_height="32dp"
-            android:layout_width="match_parent"/>
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:paddingBottom="8dp"/>
 
     </RadioGroup>
 
     <Button
-        android:id="@+id/button4"
+        android:id="@+id/buttonDone"
         android:layout_width="match_parent"
         android:layout_height="45dp"
         android:layout_marginTop="16dp"

@@ -1,6 +1,8 @@
 package com.example.myapplication
 
+import android.content.Intent
 import android.os.Bundle
+import android.widget.Button
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -13,8 +15,20 @@ class DrinkActivity : AppCompatActivity() {
         setContentView(R.layout.activity_drink)
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
+            val density = resources.displayMetrics.density
+            val padding20dp = (20 * density).toInt()
+            v.setPadding(
+                systemBars.left + padding20dp,
+                systemBars.top + padding20dp,
+                systemBars.right + padding20dp,
+                systemBars.bottom + padding20dp
+            )
             insets
+        }
+        val buttonDone = findViewById<Button>(R.id.buttonDone)
+        buttonDone.setOnClickListener {
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
         }
     }
 }

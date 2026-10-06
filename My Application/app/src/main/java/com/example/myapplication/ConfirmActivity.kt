@@ -13,7 +13,14 @@ class ConfirmActivity : AppCompatActivity() {
         setContentView(R.layout.activity_confirm)
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
+            val density = resources.displayMetrics.density
+            val padding20dp = (20 * density).toInt()
+            v.setPadding(
+                systemBars.left + padding20dp,
+                systemBars.top + padding20dp,
+                systemBars.right + padding20dp,
+                systemBars.bottom + padding20dp
+            )
             insets
         }
     }
