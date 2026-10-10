@@ -3,6 +3,7 @@ package com.example.myapplication
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
+import android.widget.CheckBox
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -25,10 +26,26 @@ class SideDishesActivity : AppCompatActivity() {
             )
             insets
         }
+
+        val cbFries = findViewById<CheckBox>(R.id.cbFries)
+        val cbSalad = findViewById<CheckBox>(R.id.cbSalad)
+        val cbCornCup = findViewById<CheckBox>(R.id.cbCornCup)
         val buttonDone = findViewById<Button>(R.id.buttonDone)
+
         buttonDone.setOnClickListener {
-            val intent = Intent(this, MainActivity::class.java)
-            startActivity(intent)
+            val selectedSides = mutableListOf<String>()
+            if (cbFries.isChecked) selectedSides.add(cbFries.text.toString())
+            if (cbSalad.isChecked) selectedSides.add(cbSalad.text.toString())
+            if (cbCornCup.isChecked) selectedSides.add(cbCornCup.text.toString())
+
+            if (selectedSides.isNotEmpty()) {
+                val sidesText = selectedSides.joinToString(", ")
+                val intent = Intent().apply {
+                    putExtra("SELECTED_SIDES", sidesText)
+                }
+                setResult(RESULT_OK, intent)
+                finish()
+            }
         }
     }
 }

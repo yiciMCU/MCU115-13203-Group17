@@ -3,6 +3,8 @@ package com.example.myapplication
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
+import android.widget.RadioButton
+import android.widget.RadioGroup
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -25,10 +27,22 @@ class MainMealActivity : AppCompatActivity() {
             )
             insets
         }
+
+        val radioGroup = findViewById<RadioGroup>(R.id.radioGroup)
         val buttonDone = findViewById<Button>(R.id.buttonDone)
+
         buttonDone.setOnClickListener {
-            val intent = Intent(this, MainActivity::class.java)
-            startActivity(intent)
+            val selectedId = radioGroup.checkedRadioButtonId
+            if (selectedId != -1) {
+                val radioButton = findViewById<RadioButton>(selectedId)
+                val mealName = radioButton.text.toString()
+
+                val intent = Intent().apply {
+                    putExtra("SELECTED_MAIN", mealName)
+                }
+                setResult(RESULT_OK, intent)
+                finish()
+            }
         }
     }
 }
