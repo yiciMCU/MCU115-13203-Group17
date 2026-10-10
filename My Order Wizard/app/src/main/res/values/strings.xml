@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">My Application</string>
+    <string name="app_name">My Order Wizard</string>
     <string name="fastfood_order_wizard">Fastfood Order Wizard</string>
     <string name="choose_main_meal">Choose Main Meal</string>
     <string name="choose_side_dishes">Choose Side Dishes</string>
