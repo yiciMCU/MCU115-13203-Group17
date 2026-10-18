@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">MyPageSwitching</string>
+    <string name="one">第一頁</string>
+    <string name="edittext">請輸入文字</string>
+    <string name="button">切換頁面</string>
+    <string name="twoedittext">從第二頁收到的回傳文字:</string>
 </resources>
