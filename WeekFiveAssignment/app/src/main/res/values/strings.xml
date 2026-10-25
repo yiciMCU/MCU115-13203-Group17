@@ -1,3 +1,15 @@
 <resources>
     <string name="app_name">WeekFiveAssignment</string>
+    <string name="tab_start">Start</string>
+    <string name="tab_progress">Progress</string>
+    <string name="tab_result">Result</string>
+    <string name="btn_start">Start</string>
+    <string name="btn_cancel">Cancel</string>
+    <string name="status_idle">Idle</string>
+    <string name="status_preparing">Preparing</string>
+    <string name="status_working">Work</string>
+    <string name="status_finished">背景工作結束</string>
+    <string name="status_cancelled">Cancelled</string>
+    <string name="progress_percent">%1$d%%</string>
+    <string name="cancelled_percent">%1$d%%\n背景工作中斷</string>
 </resources>
